@@ -1,0 +1,51 @@
+/* CSS próprio: apenas o que o Tailwind não cobre (animações, componentes repetidos) */
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+:focus-visible { outline: 2px solid #ffb454; outline-offset: 3px; }
+
+#navbar.scrolled { background: rgba(20,13,36,.85); backdrop-filter: blur(12px); box-shadow: 0 1px 0 rgba(255,255,255,.08); }
+
+.cover { background: linear-gradient(135deg, #8b6cff, #ff6b8b 60%, #ffb454); }
+
+/* Equalizador: elemento de destaque do hero */
+.eq span { width: 10px; border-radius: 6px; background: rgba(20,13,36,.75); transform-origin: bottom; animation: eq 1.2s ease-in-out infinite; }
+.eq span:nth-child(1){height:40%;animation-delay:-.9s} .eq span:nth-child(2){height:75%;animation-delay:-.6s}
+.eq span:nth-child(3){height:55%;animation-delay:-.3s} .eq span:nth-child(4){height:100%;animation-delay:0s}
+.eq span:nth-child(5){height:60%;animation-delay:-.45s} .eq span:nth-child(6){height:80%;animation-delay:-.75s}
+.eq span:nth-child(7){height:35%;animation-delay:-.15s}
+@keyframes eq { 0%,100% { transform: scaleY(.35); } 50% { transform: scaleY(1); } }
+
+.float { animation: float 6s ease-in-out infinite; }
+@keyframes float { 50% { transform: translateY(-10px); } }
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+.card { border: 1px solid rgba(255,255,255,.1); border-radius: 1rem; padding: 1.5rem; transition: transform .25s, border-color .25s; }
+.card:hover { transform: translateY(-4px); border-color: #8b6cff; }
+.card i { font-size: 1.5rem; color: #8b6cff; }
+.card h3 { margin-top: 1rem; font-family: Manrope, sans-serif; font-weight: 700; font-size: 1.125rem; }
+.card p { margin-top: .5rem; color: #c9c2dd; font-size: .875rem; }
+
+.artist { text-align: center; border: 1px solid rgba(255,255,255,.1); border-radius: 1rem; padding: 1.5rem; background: #140d24; }
+.artist h3 { margin-top: 1rem; font-family: Manrope, sans-serif; font-weight: 700; }
+.artist p { color: #c9c2dd; font-size: .875rem; }
+.artist button { margin-top: 1rem; padding: .5rem 1.25rem; border-radius: 9999px; border: 1px solid rgba(255,255,255,.25); font-size: .875rem; transition: background .2s; }
+.artist button:hover { background: #8b6cff; border-color: #8b6cff; }
+.avatar { width: 96px; height: 96px; margin: 0 auto; border-radius: 50%; display: grid; place-items: center; font: 800 1.5rem Manrope, sans-serif; background: linear-gradient(135deg, var(--a), var(--b)); }
+.avatar.sm { width: 44px; height: 44px; margin: 0; font-size: .875rem; flex-shrink: 0; }
+
+.ctrl { font-size: 1.25rem; color: #c9c2dd; padding: .5rem; } .ctrl:hover { color: #fff; }
+.track:hover, .track.active { color: #ffb454; }
+input[type=range] { accent-color: #ffb454; }
+
+.field { width: 100%; background: #140d24; border: 1px solid rgba(255,255,255,.2); border-radius: .75rem; padding: .75rem 1rem; }
+.field.invalid { border-color: #ff6b8b; }
+.err { color: #ff8fa6; font-size: .8rem; min-height: 1rem; margin-top: .25rem; }
+.social { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 50%; border: 1px solid rgba(255,255,255,.2); transition: background .2s, color .2s; }
+.social:hover { background: #ffb454; color: #140d24; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .reveal { opacity: 1; transform: none; }
+}

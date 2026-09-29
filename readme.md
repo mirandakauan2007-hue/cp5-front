@@ -21,8 +21,7 @@ js/script.js    navbar, menu, player, formulário
 assets/         pasta para imagens e ícones (o projeto usa gradientes CSS)
 ```
 
-## Como executar
-Abra `index.html` no navegador. É necessária conexão com a internet para carregar Tailwind, Font Awesome e Google Fonts.
+
 
 ## GitHub Pages
 1. Crie um repositório e envie os arquivos na raiz.
@@ -30,11 +29,6 @@ Abra `index.html` no navegador. É necessária conexão com a internet para carr
 3. Acesse a URL gerada pelo GitHub.
 
 ## Integrantes
-- Nome — RM
-- Nome — RM
-- Nome — RM
-- Nome — RM
-- Nome — RM
+- Nome Kaua Miranda — RM 569473
+  
 
-## Créditos
-Nenhuma imagem externa: capas e avatares são gradientes CSS. Bibliotecas: Tailwind CSS, Font Awesome, Google Fonts.
